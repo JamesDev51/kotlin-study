@@ -15,7 +15,8 @@ fun addVeryLongStringDecimal(a:String, b:String):String{
                             else return "?"
         var sum=aVal+bVal+carry
         val mod=sum%10
-        res+=mod.toString()
+        if (sum==10) res+='0'
+        else res+=mod.toString()
         if(sum>=10) carry=1
         else carry=0
 
